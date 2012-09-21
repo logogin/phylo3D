@@ -1,0 +1,260 @@
+Graph
+{
+	### metadata ###
+	@name="NCBI Tree of Life";
+	@description="NCBI Tree of Life in LibSea format";
+	@numNodes=10;
+	@numLinks=9;
+	@numPaths=0;
+	@numPathLinks=0;
+
+	### structural data ###
+	@links=
+	[
+		{ @source=0; @destination=1; } ,
+		{ @source=0; @destination=2; } ,
+		{ @source=2; @destination=3; } ,
+		{ @source=2; @destination=4; } ,
+		{ @source=1; @destination=5; } ,
+		{ @source=1; @destination=6; } ,
+		{ @source=5; @destination=7; } ,
+		{ @source=5; @destination=8; } ,
+		{ @source=5; @destination=9; } 
+	];
+	@paths=;
+
+	### attribute data ###
+	@enumerations=;
+	@attributeDefinitions=
+	[
+		{
+			@name=$root;
+			@type=bool;
+			@default=|| false ||;
+			@nodeValues=[ { @id=0; @value=T; } ];
+			@linkValues=;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$tree_link;
+			@type=bool;
+			@default=|| false ||;
+			@nodeValues=;
+			@linkValues=[
+				{ @id=0; @value=T; },
+				{ @id=1; @value=T; },
+				{ @id=2; @value=T; },
+				{ @id=3; @value=T; },
+				{ @id=4; @value=T; },
+				{ @id=5; @value=T; },
+				{ @id=6; @value=T; },
+				{ @id=7; @value=T; },
+				{ @id=8; @value=T; }
+			]
+			;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$subtree_color;
+			@type=int;
+			@default=|| 16777215 ||;
+			@nodeValues=[
+				{ @id=0; @value=16777215; },
+				{ @id=1; @value=16777215; },
+				{ @id=2; @value=16777215; },
+				{ @id=3; @value=65535; },
+				{ @id=4; @value=65535; },
+				{ @id=5; @value=16777215; },
+				{ @id=6; @value=65280; },
+				{ @id=7; @value=255; },
+				{ @id=8; @value=16711935; },
+				{ @id=9; @value=16711935; }
+			]
+			;
+			@linkValues=[
+				{ @id=0; @value=16777215; },
+				{ @id=1; @value=16777215; },
+				{ @id=2; @value=65535; },
+				{ @id=3; @value=65535; },
+				{ @id=4; @value=16777215; },
+				{ @id=5; @value=65280; },
+				{ @id=6; @value=255; },
+				{ @id=7; @value=16711935; },
+				{ @id=8; @value=16711935; }
+			]
+			;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$tax_classif;
+			@type=string;
+			@default=|| "tax.classif.=internal node" ||;
+			@nodeValues=[
+				{ @id=3; @value="tax. classif.=canis"; },
+				{ @id=4; @value="tax. classif.=canis"; },
+				{ @id=6; @value="tax. classif.=ape"; },
+				{ @id=7; @value="tax. classif.=birds"; },
+				{ @id=8; @value="tax. classif.=fish"; },
+				{ @id=9; @value="tax. classif.=fish"; }
+			]
+			;
+			@linkValues=;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$sequence_name;
+			@type=string;
+			@default=|| "unknown" ||;
+			@nodeValues=[
+				{ @id=0; @value="sequence name=zero"; },
+				{ @id=1; @value="sequence name=one"; },
+				{ @id=2; @value="sequence name=two"; },
+				{ @id=3; @value="sequence name=six"; },
+				{ @id=4; @value="sequence name=five"; },
+				{ @id=5; @value="sequence name=three"; },
+				{ @id=6; @value="sequence name=four"; },
+				{ @id=7; @value="sequence name=nine"; },
+				{ @id=8; @value="sequence name=eight"; },
+				{ @id=9; @value="sequence name=seven"; }
+			]
+			;
+			@linkValues=;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$branch_length_to_parent;
+			@type=string;
+			@default=|| "unknown" ||;
+			@nodeValues=[
+				{ @id=0; @value="branch length to parent=unknown"; },
+				{ @id=1; @value="branch length to parent=2.3"; },
+				{ @id=2; @value="branch length to parent=1.1"; },
+				{ @id=3; @value="branch length to parent=1.4"; },
+				{ @id=4; @value="branch length to parent=1.5"; },
+				{ @id=5; @value="branch length to parent=2.3"; },
+				{ @id=6; @value="branch length to parent=3.1"; },
+				{ @id=7; @value="branch length to parent=4.3"; },
+				{ @id=8; @value="branch length to parent=5.2"; },
+				{ @id=9; @value="branch length to parent=2.3"; }
+			]
+			;
+			@linkValues=;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$bootstrap_value;
+			@type=string;
+			@default=|| "unknown" ||;
+			@nodeValues=[
+				{ @id=0; @value="bootstrap value=0"; },
+				{ @id=1; @value="bootstrap value=10"; },
+				{ @id=2; @value="bootstrap value=20"; },
+				{ @id=3; @value="bootstrap value=unknown"; },
+				{ @id=4; @value="bootstrap value=unknown"; },
+				{ @id=5; @value="bootstrap value=30"; },
+				{ @id=6; @value="bootstrap value=unknown"; },
+				{ @id=7; @value="bootstrap value=unknown"; },
+				{ @id=8; @value="bootstrap value=unknown"; },
+				{ @id=9; @value="bootstrap value=unknown"; }
+			]
+			;
+			@linkValues=;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$species_name;
+			@type=string;
+			@default=|| "unknown" ||;
+			@nodeValues=[
+				{ @id=0; @value="species name=zero"; },
+				{ @id=1; @value="species name=one"; },
+				{ @id=2; @value="species name=two"; },
+				{ @id=3; @value="species name=six"; },
+				{ @id=4; @value="species name=five"; },
+				{ @id=5; @value="species name=three"; },
+				{ @id=6; @value="species name=four"; },
+				{ @id=7; @value="species name=nine"; },
+				{ @id=8; @value="species name=eight"; },
+				{ @id=9; @value="species name=seven"; }
+			]
+			;
+			@linkValues=;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$taxonomy_id;
+			@type=string;
+			@default=|| "unknown" ||;
+			@nodeValues=[
+				{ @id=0; @value="taxonomy ID=unknown"; },
+				{ @id=1; @value="taxonomy ID=1"; },
+				{ @id=2; @value="taxonomy ID=2"; },
+				{ @id=3; @value="taxonomy ID=6"; },
+				{ @id=4; @value="taxonomy ID=5"; },
+				{ @id=5; @value="taxonomy ID=3"; },
+				{ @id=6; @value="taxonomy ID=4"; },
+				{ @id=7; @value="taxonomy ID=9"; },
+				{ @id=8; @value="taxonomy ID=8"; },
+				{ @id=9; @value="taxonomy ID=7"; }
+			]
+			;
+			@linkValues=;
+			@pathValues=;
+		}
+		,
+		{
+			@name=$ec_number;
+			@type=string;
+			@default=|| "unknown" ||;
+			@nodeValues=[
+				{ @id=0; @value="EC number=unknown"; },
+				{ @id=1; @value="EC number=unknown"; },
+				{ @id=2; @value="EC number=unknown"; },
+				{ @id=3; @value="EC number=unknown"; },
+				{ @id=4; @value="EC number=unknown"; },
+				{ @id=5; @value="EC number=unknown"; },
+				{ @id=6; @value="EC number=unknown"; },
+				{ @id=7; @value="EC number=unknown"; },
+				{ @id=8; @value="EC number=unknown"; },
+				{ @id=9; @value="EC number=unknown"; }
+			]
+			;
+			@linkValues=;
+			@pathValues=;
+		}
+	];
+	@qualifiers=
+	[
+		{
+			@type=$spanning_tree;
+			@name=$sample_spanning_tree;
+			@description=;
+			@attributes=
+			[
+				{@attribute=0;@alias=$root;},
+				{@attribute=1;@alias=$tree_link;}
+			];
+		}
+	];
+
+	### visualization hints ###
+	@filters=;
+	@selectors=;
+	@displays=;
+	@presentations=;
+
+	### interface hints ###
+	@presentationMenus=;
+	@displayMenus=;
+	@selectorMenus=;
+	@filterMenus=;
+	@attributeMenus=;
+}

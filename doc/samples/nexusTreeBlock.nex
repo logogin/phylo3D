@@ -1,0 +1,20 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Wed Jun  2 18:02:46 2004]
+[!
+>Data file = /home/salamin/inprogress/genbank/angiosperm/rbcl/rbcl_ambo.nex
+>
+>Processing TREES block from file "rbcl_root.bionj":
+>   Keeping: trees from file (replacing trees in memory)
+>   1 tree read from file
+]
+	Translate
+		1 'Aa_paleacea_APA10',
+		2 'Abatia_parviflora_AF26',
+		3 'Abelia_triflora_AF27',
+		4 'Abildgaardia_ovata_AOY5',
+		5 'Abobra_tenuifolia_AF61'
+		;
+tree PAUP_1 = [&R] (1,(2,(3,(4,5))));
+End;
+		
